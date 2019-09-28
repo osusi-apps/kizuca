@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  # 初期画面
+  root to: 'posts#index'
+  
   get 'posts/index'
   get 'posts/show'
   get 'posts/new'
