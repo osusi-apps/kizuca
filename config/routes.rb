@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/index'=> "users#index"
 
   # 初期画面
   root to: 'posts#index'
