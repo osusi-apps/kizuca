@@ -1,0 +1,5 @@
+<% @posts.each do |post| %>
+  <%= link_to(post.content, "/posts/#{post.id}") %>
+<% end %>
+
+<%= link_to  "投稿する", "/posts/new" %>
