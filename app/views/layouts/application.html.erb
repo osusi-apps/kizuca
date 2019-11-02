@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Kizuca</title>
     <%= csrf_meta_tags %>
@@ -12,11 +13,16 @@
   <body>
     <header>
       <div class="header-logo">
-        <%= link_to("TweetApp", "/") %>
+        <% if @current_user %>
+          <%= link_to("TweetApp", "/posts/index") %>
+        <% else %>
+          <%= link_to("TweetApp", "/") %>
+        <% end %>
       </div>
       <ul class="header-menus">
+        <% if @current_user %>
         <li>
-          <%= link_to("TweetAppとは", "/about") %>
+          <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
         </li>
         <li>
           <%= link_to("投稿一覧", "/posts/index") %>
@@ -28,8 +34,19 @@
           <%= link_to("ユーザー一覧", "/users/index") %>
         </li>
         <li>
+          <%= link_to("ログアウト", "/logout", {method: :post}) %>
+        </li>
+        <% else %>
+        <li>
+          <%= link_to("TweetAppとは", "/about") %>
+        </li>
+        <li>
           <%= link_to("新規登録", "/signup") %>
         </li>
+        <li>
+          <%= link_to("ログイン", "/login") %>
+        </li>
+        <% end %>
       </ul>
     </header>
 
@@ -38,7 +55,7 @@
         <%= flash[:notice] %>
       </div>
     <% end %>
-    
+
     <%= yield %>
   </body>
 </html>
