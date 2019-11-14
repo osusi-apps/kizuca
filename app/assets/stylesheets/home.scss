@@ -63,7 +63,7 @@ body {
 /* ヘッダー ================================ */
 header {
   height: 64px;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   width: 100%;
   background-color: #F781BE;
@@ -106,6 +106,45 @@ header {
 }
 
 .header-menus input[type="submit"] {
+  padding: 0 20px;
+  float: left;
+  line-height: 64px;
+  color: white;
+  margin: 0;
+  font-size: 13px;
+}
+
+/* フッター ================================ */
+footer {
+  height: 64px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #18bb92;
+}
+
+.footer-menus {
+  text-align: center;
+  
+}
+
+.footer-menus li {
+  float: left;
+  line-height: 64px;
+  color: white;
+  margin: 5px auto;
+}
+
+.footer-menus a {
+  float: left;
+  color: white;
+}
+
+.footer-menus .fa {
+  padding-right: 5px;
+}
+
+.footer-menus input[type="submit"] {
   padding: 0 20px;
   float: left;
   line-height: 64px;

@@ -14,7 +14,7 @@
   <header>
     <div class="header-logo">
       <% if @current_user %>
-      <%= link_to("TweetApp", "/posts/index") %>
+      <%= link_to("Kizuca", "/posts/index") %>
       <% else %>
       <%= link_to("Kizuca", "/") %>
       <% end %>
@@ -53,23 +53,23 @@
   <%= yield %>
 
   <footer>
-    <ul class="header-menus">
+    <ul class="footer-menus">
       <% if @current_user %>
 
       <li>
-        <%= link_to("DM", "/") %>
+        <%= link_to image_tag('mail.png',alt:'メール'), '/' %>
       </li>
       <li>
-        <%= link_to("グループ", "/") %>
+        <%= link_to image_tag('group.png',alt:'グループ'), '/' %>
       </li>
      <li>
-        <%= link_to("通知", "/") %>
+        <%= link_to image_tag('bell.png',alt:'通知'), '/' %>
       </li>
       <li>
-        <%= link_to("新規投稿", "/posts/new") %>
+        <%= link_to image_tag('pencil.png',alt:'新規投稿'), '/posts/new' %>
       </li>
       <li>
-        <%= link_to("ホーム", "/posts/index") %>
+        <%= link_to image_tag('home.png',alt:'ホーム'), '/posts/index' %>
       </li>
       <% end %>
     </ul>

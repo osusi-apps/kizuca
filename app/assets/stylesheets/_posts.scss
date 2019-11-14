@@ -83,11 +83,17 @@
   
   /* posts/new ================================ */
   .posts-new textarea {
+    float: left;
     font-size: 20px;
     padding: 10px;
     min-height: 140px;
-    border: 1px solid rgb(216, 218, 223);
+    border: 1px solid white;
     resize: none;
+  }
+
+  .posts-new input {
+    background: #F781BE;
+    color: white;
   }
   
   .posts-new textarea::-webkit-input-placeholder {
