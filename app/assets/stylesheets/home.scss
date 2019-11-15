@@ -38,7 +38,7 @@ form input[type="submit"] {
 /* 共通レイアウト ================================ */
 body {
   color: #2d3133;
-  background-color: #18bb92;
+  background-color: #e3ebe9;
   margin: 0;
   min-height: 1vh;
 }
@@ -116,6 +116,7 @@ header {
 
 /* フッター ================================ */
 footer {
+  margin: 0 auto;
   height: 64px;
   position: fixed;
   bottom: 0;
@@ -124,15 +125,15 @@ footer {
 }
 
 .footer-menus {
-  text-align: center;
-  
+width: 100%;
+padding: 0 5%;
 }
 
 .footer-menus li {
-  float: left;
+  float: right;
   line-height: 64px;
   color: white;
-  margin: 5px auto;
+  margin: 5px 15px;
 }
 
 .footer-menus a {
