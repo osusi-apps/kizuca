@@ -54,9 +54,7 @@ body {
 
 .container {
   max-width: 600px;
-  margin: 60px auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto;
   clear: both;
 }
 
@@ -116,7 +114,6 @@ header {
 
 /* フッター ================================ */
 footer {
-  margin: 0 auto;
   height: 64px;
   position: fixed;
   bottom: 0;
@@ -125,15 +122,16 @@ footer {
 }
 
 .footer-menus {
+text-align: center;
 width: 100%;
 padding: 0 5%;
 }
 
 .footer-menus li {
-  float: right;
+  display: inline-block;
   line-height: 64px;
   color: white;
-  margin: 5px 15px;
+  margin: 5px 2%;
 }
 
 .footer-menus a {
