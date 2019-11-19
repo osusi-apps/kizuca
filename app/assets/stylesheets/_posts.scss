@@ -83,20 +83,26 @@
   /* posts/new ================================ */
   .posts-new textarea {
     font-size: 20px;
-    padding: 10px;
     min-height: 140px;
-    width: 90%;
+    width: 100%;
     border: 1px solid white;
     resize: none;
-    margin: 70px 5% 0 5%;
+    margin-top: 64px;
   }
 
   .posts-new input {
+    float:right;
     background: #F781BE;
     color: white;
     font-size: 20px;
     padding: 5px 20px;
-    margin: 10px 5%;
+  }
+
+  textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
+    outline: 0;
+    box-shadow: none;
+    border: 1px solid white;
+    background-color: #ffffff;
   }
   
   .posts-new textarea::-webkit-input-placeholder {
