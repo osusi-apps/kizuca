@@ -65,3 +65,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # RuboCop
 gem 'rubocop', require: false
+
+# jQuery
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
