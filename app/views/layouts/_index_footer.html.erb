@@ -1,0 +1,22 @@
+  <footer>
+    <ul class="footer-menus">
+      <% if @current_user %>
+
+      <li>
+        <%= link_to image_tag('mail.png',alt:'メール'), '/' %>
+      </li>
+      <li>
+        <%= link_to image_tag('group.png',alt:'グループ'), '/' %>
+      </li>
+     <li>
+        <%= link_to image_tag('bell.png',alt:'通知'), '/' %>
+      </li>
+      <li>
+        <%= link_to image_tag('pencil.png',alt:'新規投稿'), '/posts/new' %>
+      </li>
+      <li>
+        <%= link_to image_tag('home.png',alt:'ホーム'), '/posts/index' %>
+      </li>
+      <% end %>
+    </ul>
+  </footer>
