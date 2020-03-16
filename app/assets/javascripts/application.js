@@ -15,15 +15,13 @@
 //= require turbolinks
 //= require_tree .
 //= require jquery
-//= require jquery_ujs
 //= require jquery-ui
 
 // ダイアログ表示
 $(function () {
-    $("#button").on("click", function () {
+    $("#button1").on("click", function () {
         $("#dialog").dialog({
-            modal: true,
-            title: 'モーダルダイアログ'
+            modal: false,
         });
     });
 });
