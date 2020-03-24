@@ -48,9 +48,25 @@
   .user-show {
     text-align: center;
   }
+
+  .user-show .container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+  }
   
   .user {
     margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    h2 {
+      margin-top: 1.5rem;
+      margin-left: 1.5rem;
+    }
+    p {
+      margin-top: 1.5rem;
+      margin-left: 0.5rem;
+    }
   }
   
   .user img {
