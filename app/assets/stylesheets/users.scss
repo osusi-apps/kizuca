@@ -47,18 +47,23 @@
   /* users/show ================================ */
   .user-show {
     text-align: center;
-  }
-
-  .user-show .container {
-    max-width: 600px;
-    margin: 0 auto;
-    position: relative;
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .posts-index-item {
+      margin: 0 auto 0.5rem;
+    }
   }
   
   .user {
-    margin-bottom: 20px;
     width: 100%;
     display: flex;
+    background-color: #F781BE;
+    .icon {
+      margin-left: 1.5rem;
+    }
     h2 {
       margin-top: 1.5rem;
       margin-left: 1.5rem;
