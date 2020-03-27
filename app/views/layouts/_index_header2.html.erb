@@ -12,10 +12,28 @@
       <% if @current_user %>
       <li>
         <%= link_to '/' do %>
+        <i class="fas fa-cog fa-2x header-icon"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "/users/#{@current_user.id}" do %>
+        <i class="far fa-envelope fa-2x header-icon"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to '/' do %>
+        <i class="fas fa-bell fa-2x header-icon"></i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to '/' do %>
         <i class="fas fa-home fa-2x header-icon"></i>
         <% end %>
       </li>
       <% else %>
+      <li>
+        <%= link_to("Kizucaについて", "/about") %>
+      </li>
       <li>
         <%= link_to("新規登録", "/signup") %>
       </li>
