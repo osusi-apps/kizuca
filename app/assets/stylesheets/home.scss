@@ -64,8 +64,8 @@ body {
   padding-left: 1rem;
   padding-right: 5rem;
   margin-left: 440px;
-  border-left: solid 1px #57575f;
-  border-right: solid 1px #57575f;
+  border-left: solid 1px #808080;
+  border-right: solid 1px #808080;
   height: 1000px;
   position: fixed;
 }
@@ -93,7 +93,7 @@ header {
   z-index: 1;
   width: 100%;
   background-color: white;
-  border-bottom: solid 1px #57575f;
+  border-bottom: solid 1px #808080;
 }
 
 .header-logo {
@@ -107,7 +107,7 @@ header {
 .header-logo a{
   color: #F781BE;
   font-size: 24px;
-
+  margin-left: 80px;
 }
 
 .header-menus {
@@ -306,7 +306,7 @@ padding: 0 5%;
   width: 100%;
   border: 1px solid #d8dadf;
   padding: 10px;
-  color: #57575f;
+  color: #808080;
   font-size: 16px;
   letter-spacing: 2px;
   border-radius: 2px;
