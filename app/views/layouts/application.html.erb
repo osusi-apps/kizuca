@@ -5,46 +5,15 @@
   <title>Kizuca</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-  <%# FontAwesomeの読み込み %>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 </head>
 
 <body>
   <header>
-    <div class="header-logo">
-      <% if @current_user %>
-      <%= link_to("Kizuca", "/posts/index") %>
-      <% else %>
-      <%= link_to("Kizuca", "/") %>
-      <% end %>
-    </div>
-    <ul class="header-menus">
-      <% if @current_user %>
-      <li>
-        <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
-      </li>
-       <li>
-        <%= link_to("検索", "/") %>
-      </li>
-      <li>
-        <%= link_to("ログアウト", "/logout", {method: :post}) %>
-      </li>
-      <% else %>
-      <li>
-        <%= link_to("Kizucaについて", "/about") %>
-      </li>
-      <li>
-        <%= link_to("新規登録", "/signup") %>
-      </li>
-      <li>
-        <%= link_to("ログイン", "/login") %>
-      </li>
-      <% end %>
-    </ul>
+      <%= render  "layouts/index_header" %>
   </header>
 
   <% if flash[:notice] %>
@@ -54,30 +23,11 @@
   <% end %>
 
   <%= yield %>
-
+<!--
   <footer>
-    <ul class="footer-menus">
-      <% if @current_user %>
-
-      <li>
-        <%= link_to image_tag('mail.png',alt:'メール'), '/' %>
-      </li>
-      <li>
-        <%= link_to image_tag('group.png',alt:'グループ'), '/' %>
-      </li>
-     <li>
-        <%= link_to image_tag('bell.png',alt:'通知'), '/' %>
-      </li>
-      <li>
-        <%= link_to image_tag('pencil.png',alt:'新規投稿'), '/posts/new' %>
-      </li>
-      <li>
-        <%= link_to image_tag('home.png',alt:'ホーム'), '/posts/index' %>
-      </li>
-      <% end %>
-    </ul>
+    <%#= render  "layouts/index_footer" %>
   </footer>
-
+-->
 </body>
 
 </html>

@@ -1,18 +1,28 @@
 /* users/index ================================ */
+.users-index {
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
 .users-heading {
     font-weight: 300;
-    margin: 60px 0 20px;
-    font-size: 48px;
-    color: #bcc8d4;
+    margin: 1rem 1rem;
+    font-size: 24px;
+    color: #3ecdc6;
   }
-  
+
   .users-index-item {
     padding: 20px 30px;
     background-color: white;
     overflow: hidden;
-    box-shadow: 0 2px 6px #c1ced7;
     display: table;
     width: 100%;
+    border-left: solid 1px #2d3133;
+    border-right: solid 1px #2d3133;
+    border-top:solid 1px #2d3133;
   }
   
   .user-left img {
@@ -47,10 +57,31 @@
   /* users/show ================================ */
   .user-show {
     text-align: center;
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .posts-index-item {
+      margin: 0 auto 0.5rem;
+    }
   }
   
   .user {
-    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    background-color: #F781BE;
+    .icon {
+      margin-left: 1.5rem;
+    }
+    h2 {
+      margin-top: 1.5rem;
+      margin-left: 1.5rem;
+    }
+    p {
+      margin-top: 1.5rem;
+      margin-left: 0.5rem;
+    }
   }
   
   .user img {
@@ -101,7 +132,7 @@
   }
   
   .user-tabs li.active a {
-    color: #57575f;
+    color: #808080;
   }
   
   .user-tabs a {
