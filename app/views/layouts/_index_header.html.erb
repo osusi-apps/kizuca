@@ -1,25 +1,34 @@
-  <header>
     <div class="header-logo">
       <% if @current_user %>
       <%= link_to("Kizuca", "/posts/index") %>
+      <%= link_to '/users/index' do %>
+        <i class="fas fa-user-plus header-icon header-search"></i>
+      <% end %>
       <% else %>
       <%= link_to("Kizuca", "/") %>
-      <%= link_to("検索", "/") %>
       <% end %>
     </div>
     <ul class="header-menus">
       <% if @current_user %>
       <li>
-        <%= link_to("設定", "/users/#{@current_user.id}") %>
+        <%= link_to '/' do %>
+        <i class="fas fa-cog fa-2x header-icon"></i>
+        <% end %>
       </li>
       <li>
-        <%= link_to("DM", "/users/#{@current_user.id}") %>
+        <%= link_to "/users/#{@current_user.id}" do %>
+        <i class="far fa-envelope fa-2x header-icon"></i>
+        <% end %>
       </li>
       <li>
-        <%= link_to("通知"", "/users/#{@current_user.id}") %>
+        <%= link_to '/' do %>
+        <i class="fas fa-bell fa-2x header-icon"></i>
+        <% end %>
       </li>
       <li>
-        <%= link_to("ホーム", "/users/#{@current_user.id}") %>
+        <%= link_to '/' do %>
+        <i class="fas fa-home fa-2x header-icon"></i>
+        <% end %>
       </li>
       <% else %>
       <li>
@@ -33,4 +42,3 @@
       </li>
       <% end %>
     </ul>
-  </header>
