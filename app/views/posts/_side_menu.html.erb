@@ -1,5 +1,6 @@
 <div class="side">
     <%= link_to  "ホーム", '/posts/index',{class:"side-button"} %>
-    <%= link_to  "グループ", '/posts/index',{class:"side-button"} %>
+    <%#= link_to  "グループ", '/posts/index',{class:"side-button"} %>
+    <%= link_to("ログアウト", "/logout", {method: "post", class:"side-button"}) %>
     <%= button_to  "投稿",  '/posts/create', {class: "post-button", id: "post-new-button"} %>
 </div>
