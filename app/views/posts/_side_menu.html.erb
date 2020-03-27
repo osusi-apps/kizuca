@@ -1,7 +1,5 @@
 <div class="side">
-    <div class="side-button">ホーム</div>
-    <div class="side-button">グループ</div>
-    <div>
-        <%= link_to image_tag('pencil.png',alt:'新規投稿'), '/posts/new' %>
-    </div>
+    <%= link_to  "ホーム", '/posts/index',{class:"side-button"} %>
+    <%= link_to  "グループ", '/posts/index',{class:"side-button"} %>
+    <%= button_to  "投稿", posts_new_path, {class: "post-button", id: "post-new-button"} %>
 </div>
