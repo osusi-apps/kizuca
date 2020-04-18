@@ -26,6 +26,8 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       flash[:notice] = "ユーザー登録が完了しました"
       redirect_to("/users/#{@user.id}")
+      NotificationMailer.send_confirm_to_user(@user).deliver
+      redirect_to @user
     else
       render("users/new")
     end
