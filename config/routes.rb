@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   post "likes/:post_id/create" => "likes#create"
   post "likes/:post_id/destroy" => "likes#destroy"
 
@@ -27,6 +26,4 @@ Rails.application.routes.draw do
   get "/" => "home#top"
   get "about" => "home#about"
 
-  # フォロー
-  resources :relationships, only: [:create, :destroy]
 end
